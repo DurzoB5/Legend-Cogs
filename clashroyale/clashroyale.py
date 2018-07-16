@@ -21,7 +21,7 @@ class clashroyale:
         self.auth = self.bot.get_cog('crtools').auth
         self.tags = self.bot.get_cog('crtools').tags
         self.clans = self.bot.get_cog('crtools').clans
-        self.clash = clashroyaleAPI.Client(self.auth.getToken(), is_async=True)
+        self.clash = clashroyaleAPI.RoyaleAPI(self.auth.getToken(), is_async=True)
 
     def getCards(self, maxPlayers):
         """Converts maxPlayers to Cards"""
